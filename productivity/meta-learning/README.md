@@ -17,24 +17,10 @@ When you ask to learn something, Claude guides you through an active process:
 
 ## Install
 
-**Recommended — `npx` (or `bunx`):**
+Install from the [1st-skills](https://github.com/Sightless21/1st-skills) collection (installs this skill plus any others in the repo):
 
 ```sh
-npx @sightless21/meta-learning
-# or
-bunx @sightless21/meta-learning
-```
-
-This copies the skill into `~/.claude/skills/meta-learning/`. To remove it:
-
-```sh
-npx @sightless21/meta-learning --uninstall
-```
-
-**Or install from the [1st-skills](https://github.com/Sightless21/1st-skills) collection** (installs this skill plus any others in the repo):
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/Sightless21/1st-skills/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/Sightless21/1st-skills/main/scripts/install.sh | bash
 ```
 
 Then **start a new Claude Code session** (skills load at session start).
@@ -47,5 +33,5 @@ Then **start a new Claude Code session** (skills load at session start).
 ## Uninstall
 
 ```sh
-rm -rf ~/.claude/skills/meta-learning
+rm ~/.claude/skills/meta-learning
 ```
