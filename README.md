@@ -1,23 +1,16 @@
-# meta-learning — a Claude Code skill
+# 1st-skills
 
-A **Meta-Learning Facilitator** skill for [Claude Code](https://claude.com/claude-code). It turns Claude into an active-learning coach that rotates through expert sub-roles — Socratic questioning, quizzes, Feynman-style recall, error diagnosis, and spaced-repetition flashcards — instead of just lecturing.
+A collection of [Claude Code](https://claude.com/claude-code) skills, organized by category.
 
-## What it does
+## Categories
 
-When you ask to learn something, Claude guides you through an active process:
+| Category | Skills |
+| --- | --- |
+| **productivity** | [`meta-learning`](./productivity/meta-learning) — active-learning coach (Socratic questioning, quizzes, Feynman recall, flashcards) |
 
-- **Interviewer** — finds your baseline and gaps
-- **Mapmaker** — builds a step-by-step roadmap
-- **Socratic Questioner** — makes you discover answers
-- **Examiner** — quizzes you on understanding
-- **Checker** / **Diagnostician** — audits your reasoning and fixes recurring mistakes
-- **Listener** — stress-tests your explanations (Feynman Technique)
-- **Sparring Partner** — runs mock interviews / debates / roleplays
-- **Clerk** — turns your notes into summaries and Anki-style flashcards
+## Installing a skill
 
-## Install
-
-**Recommended — `npx` (or `bunx`):**
+**Recommended — `npx` / `bunx` (per skill):**
 
 ```sh
 npx @sightless21/meta-learning
@@ -25,27 +18,19 @@ npx @sightless21/meta-learning
 bunx @sightless21/meta-learning
 ```
 
-This copies the skill into `~/.claude/skills/meta-learning/`. To remove it:
+**Or install everything from this repo (git):**
 
 ```sh
-npx @sightless21/meta-learning --uninstall
+./install.sh
 ```
 
-**Or clone the repo** (as the `meta-learning` folder, so `SKILL.md` lands at `~/.claude/skills/meta-learning/SKILL.md`):
-
-```sh
-git clone https://github.com/Sightless21/meta-learning.git ~/.claude/skills/meta-learning
-```
+This clones the repo and symlinks every skill into `~/.claude/skills/`.
 
 Then **start a new Claude Code session** (skills load at session start).
 
-## Use it
+## Adding a skill
 
-- `/meta-learning <topic>` — invoke directly
-- or just ask: *"help me learn X"*, *"quiz me on Y"* — it auto-triggers
-
-## Uninstall
-
-```sh
-rm -rf ~/.claude/skills/meta-learning
-```
+1. Create a category folder if needed: `productivity/`, `coding/`, `writing/`, …
+2. Put the skill in `<category>/<skill-name>/` with a `SKILL.md` at that level.
+3. If it ships as an npm package, keep `package.json` + `bin/install.js` inside the skill folder.
+4. Add a row to the table above.
