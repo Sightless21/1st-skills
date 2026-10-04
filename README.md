@@ -17,16 +17,24 @@ When you ask to learn something, Claude guides you through an active process:
 
 ## Install
 
-Clone the repo **as** the `meta-learning` folder inside your skills directory, so `SKILL.md` lands at `~/.claude/skills/meta-learning/SKILL.md`:
+**Recommended — `npx` (or `bunx`):**
+
+```sh
+npx @sightless21/meta-learning
+# or
+bunx @sightless21/meta-learning
+```
+
+This copies the skill into `~/.claude/skills/meta-learning/`. To remove it:
+
+```sh
+npx @sightless21/meta-learning --uninstall
+```
+
+**Or clone the repo** (as the `meta-learning` folder, so `SKILL.md` lands at `~/.claude/skills/meta-learning/SKILL.md`):
 
 ```sh
 git clone https://github.com/Sightless21/meta-learning.git ~/.claude/skills/meta-learning
-```
-
-Or run the bundled script (it clones for you):
-
-```sh
-curl -fsSL https://raw.githubusercontent.com/Sightless21/meta-learning/main/install.sh | bash
 ```
 
 Then **start a new Claude Code session** (skills load at session start).
